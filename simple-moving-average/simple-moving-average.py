@@ -5,6 +5,8 @@ def simple_moving_average(values: list, window_size: int) -> list:
     SMA = []
     n = len(values)
     # Lets calculate SMA[0]
+    if n < window_size or window_size <= 0:
+        return []
     s_0 = 0
     for i in range(window_size):
         s_0 += values[i]
